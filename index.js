@@ -1,6 +1,5 @@
 function sort(array) {
-    console.log(typeof(array))
-    if(typeof(array) !== "array" || array.some(x => typeof(x) !== "number")) return "Debes introducir un array de números";
+    if(!Array.isArray(array) || array.some(x => typeof(x) !== "number")) return "Debes introducir un array de números";
     let finalArray = [];
     function getNumberIndexes(array, number) {
         return {
